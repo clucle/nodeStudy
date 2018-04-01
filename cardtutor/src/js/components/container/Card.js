@@ -15,7 +15,7 @@ class Card extends Component {
 
   render() {
     return (
-      <div>hi</div>
+      <div>{this.props.name} T{this.props.age}</div>
     );
   }
 }

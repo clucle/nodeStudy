@@ -1,10 +1,22 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 
+import Card from './Card'
+
 class CardWrapperContainer extends Component {
   constructor() {
     super();
     this.state = {
+      cardData: [
+        {
+          name: '1',
+          age: '1'
+        },
+        {
+          name: '2',
+          age: '2'
+        }
+      ]
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -14,8 +26,16 @@ class CardWrapperContainer extends Component {
   }
 
   render() {
+    const mapToComponents = (datas)=> {
+      return datas.map((data, i) => {
+        return (<Card 
+          name={data.name}
+          age={data.age} />
+        );
+      });
+    }
     return (
-      <div>hi</div>
+      <div>{mapToComponents(this.state.cardData)}</div>
     );
   }
 }

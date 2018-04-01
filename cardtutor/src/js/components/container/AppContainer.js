@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import HeaderContainer from "./HeaderContainer";
+import CardWrapperContainer from "./CardWrapperContainer";
 
 class AppContainer extends Component {
   constructor() {
@@ -18,6 +19,7 @@ class AppContainer extends Component {
     return (
       <div>
           <HeaderContainer />
+          <CardWrapperContainer />
       </div>
     );
   }
